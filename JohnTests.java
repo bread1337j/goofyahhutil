@@ -73,7 +73,8 @@ public class JohnTests extends JScrollPane {
         System.out.println("Test # |Expected:                      | Result:                      | Correct?");
         System.out.println("-------|-------------------------------|------------------------------|---------");
         int c = 0;
-        for(int i=0; i<expected.length; i++) {if (expected[i]!=null){
+        int real = 0;
+        for(int i=0; i<expected.length; i++) {if (expected[i]!=null){real+=1;
             int len = 30 - expected[i].length();
             if (len < 0) {
 
@@ -98,7 +99,7 @@ public class JohnTests extends JScrollPane {
             System.out.println(i + multstring(" ", 7-("" + i).length()) + "| " + exp + multstring(" ", len) + "| " + o + multstring(" ", len2) + "| " + expected[i].equals(out[i]));
             if (expected[i].equals(out[i])) c += 1;
         }}
-        System.out.println("       |                               |                              | % Correct: " + 100 * (double)c / expected.length);
+        System.out.println("       |                               |                              | % Correct: " + 100 * (double)c / real);
 
         System.out.println("-------|-------------------------------|------------------------------|---------");
     }
@@ -106,7 +107,8 @@ public class JohnTests extends JScrollPane {
         System.out.println("Test # |Expected:                      | Result:                      | Correct?");
         System.out.println("-------|-------------------------------|------------------------------|---------");
         int c = 0;
-        for(int i=0; i<expected.length; i++) {if (expected[i]!=null){
+        int real = 0;
+        for(int i=0; i<expected.length; i++) {if (expected[i]!=null){real+=1;
             int len = 30 - expected[i].length();
             if (len < 0) {
 
@@ -126,7 +128,7 @@ public class JohnTests extends JScrollPane {
             System.out.println(i + multstring(" ", 7-("" + i).length()) + "| " + exp + multstring(" ", len) + "| " + o + multstring(" ", len2) + "| " + expected[i].equals(out[i]));
             if (expected[i].equals(out[i])) c += 1;
         }}
-        System.out.println("       |                               |                              | % Correct: " + 100 * (double)c / expected.length);
+        System.out.println("       |                               |                              | % Correct: " + 100 * (double)c / real);
         System.out.println("-------|-------------------------------|------------------------------|---------");
     }
     private JLabel iHateThis(String text){
