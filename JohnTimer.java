@@ -8,19 +8,19 @@ public class JohnTimer{
 	private double times = 0; //because there wasn't enough ambiguity in variable names already. future me is going to be so mad.
 	private double avg = 0;
 	public void start(){
-		timer = System.nanotime();
+		timer = System.nanoTime();
 		times = 0;
 		avg = 0;
 		time = 0;
 		
 	}
 	public void record(){
-		time += timer-System.nanotime();
+		time += System.nanoTime()-timer;
 		avg *= times;
 		avg += time;
 		times += 1;
 		avg /= times;
-		timer = System.nanotime();
+		timer = System.nanoTime();
 	}
 	public void display(){
 		System.out.println(time + " | AVG: " + avg);
@@ -29,7 +29,7 @@ public class JohnTimer{
 		System.out.println(time/1000000000 + " | AVG: " + avg/1000000000);
 	}
 	public void displayms(){
-		System.out.println(time/1000000 + " | AVG: " + avg/1000000
+		System.out.println(time/1000000 + " | AVG: " + avg/1000000);
 	}
 	public double getTime(){
 		return time;
